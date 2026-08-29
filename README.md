@@ -1,6 +1,6 @@
 # Robot Temp — Interactive 3D Showcase
 
-Live Demo: https://robot-showcase.vercel.app
+Live Demo: https://robot-showcase-gourab-neogi.vercel.app
 
 Category: Frontend / Interactive 3D Experience
 
@@ -88,7 +88,7 @@ npm run build
 ```
 
 - **Vercel** — Zero-config: import repo, framework preset Next.js, build `npm run build`
-- **GitHub Pages (static export)** — If exporting, set `output: 'export'` in `next.config.ts` and publish `out/`; live at https://robot-showcase.vercel.app
+- **GitHub Pages (static export)** — If exporting, set `output: 'export'` in `next.config.ts` and publish `out/`; live at https://robot-showcase-gourab-neogi.vercel.app
 - **Netlify / EdgeOne Pages / Node host** — `npm run build` then `npm run start` (SSR) or export for CDN
 
 `next.config.ts` already allows `https://**.spline.design` for optimized images.
