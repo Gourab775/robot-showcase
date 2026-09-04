@@ -5,7 +5,7 @@ import { Spotlight } from "@/components/ui/spotlight"
 
 export function SplineSceneBasic() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-black">
+    <section className="relative h-screen w-screen overflow-hidden bg-black">
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         size={600}
@@ -13,7 +13,7 @@ export function SplineSceneBasic() {
 
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10 pointer-events-none" />
 
-      <div className="relative z-20 flex flex-col lg:flex-row h-screen items-center justify-between px-6 md:px-12 lg:px-20">
+      <div className="relative z-20 flex flex-col lg:flex-row h-full items-center justify-between px-6 md:px-12 lg:px-20">
         {/* Left content */}
         <div className="flex-1 flex flex-col justify-center max-w-2xl pt-20 lg:pt-0">
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.05]">
@@ -42,14 +42,6 @@ export function SplineSceneBasic() {
             scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
             className="w-full h-full"
           />
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-xs text-white/50 uppercase tracking-widest">Scroll</span>
-        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex justify-center pt-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-white/60 animate-pulse" />
         </div>
       </div>
     </section>
