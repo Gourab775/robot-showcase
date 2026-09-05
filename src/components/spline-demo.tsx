@@ -13,9 +13,9 @@ export function SplineSceneBasic() {
 
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-transparent z-10 pointer-events-none" />
 
-      <div className="relative z-20 flex flex-col lg:flex-row h-full w-full items-center justify-between px-6 md:px-12 lg:px-20 gap-2 lg:gap-4 py-4 lg:py-0">
-        {/* Left content */}
-        <div className="flex-1 flex flex-col justify-center max-w-2xl pt-12 sm:pt-16 lg:pt-0 shrink-0">
+      <div className="relative z-20 flex flex-col lg:flex-row h-full w-full items-center lg:items-stretch justify-between px-6 md:px-12 lg:px-20 gap-2 lg:gap-4 py-4 lg:py-0">
+        {/* Left content - thoda right shift */}
+        <div className="flex-1 flex flex-col justify-center max-w-2xl pt-12 sm:pt-16 lg:pt-0 shrink-0 lg:ml-6 xl:ml-10 lg:pl-4">
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.05]">
             <span className="text-white">Build The</span>
             <br />
@@ -36,12 +36,12 @@ export function SplineSceneBasic() {
           </div>
         </div>
 
-        {/* Right content - 3D Scene - fully visible without bottom crop */}
-        <div className="flex-1 relative w-full h-[36vh] sm:h-[40vh] lg:h-[72vh] xl:h-[76vh] flex items-center justify-center overflow-visible p-2 sm:p-3 lg:p-4 pb-6 sm:pb-8 lg:pb-10">
-          <div className="w-full h-full max-h-[58vh] sm:max-h-[62vh] lg:max-h-[70vh] xl:max-h-[72vh] flex items-center justify-center -translate-y-1 lg:-translate-y-2">
+        {/* Right content - 3D Scene - bada karke bottom window end tak */}
+        <div className="flex-1 relative w-full h-[48vh] sm:h-[52vh] lg:h-full flex items-end justify-center overflow-hidden lg:overflow-visible p-0 lg:pr-0">
+          <div className="w-full h-full max-h-[52vh] lg:max-h-none lg:h-[100dvh] flex items-end justify-center">
             <SplineScene
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full scale-[0.72] sm:scale-[0.76] lg:scale-[0.78] xl:scale-[0.82] origin-center object-contain"
+              className="w-full h-full scale-[0.95] sm:scale-[1] lg:scale-[1.06] xl:scale-[1.1] origin-bottom object-contain translate-y-1 lg:translate-y-2"
             />
           </div>
         </div>
