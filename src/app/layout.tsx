@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} h-screen overflow-hidden antialiased`}
+      className={`${inter.variable} h-[100dvh] overflow-hidden antialiased`}
     >
-      <body className="h-screen w-screen overflow-hidden bg-black antialiased">{children}</body>
+      <body className="h-[100dvh] w-screen overflow-hidden bg-black antialiased">{children}</body>
     </html>
   );
 }

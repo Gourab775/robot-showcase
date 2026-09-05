@@ -5,17 +5,17 @@ import { Spotlight } from "@/components/ui/spotlight"
 
 export function SplineSceneBasic() {
   return (
-    <section className="relative h-screen w-screen overflow-hidden bg-black">
+    <section className="relative h-[100dvh] w-screen overflow-hidden bg-black flex items-center">
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         size={600}
       />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30 z-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-transparent z-10 pointer-events-none" />
 
-      <div className="relative z-20 flex flex-col lg:flex-row h-full w-full items-center justify-between px-6 md:px-12 lg:px-20 gap-4 lg:gap-2">
+      <div className="relative z-20 flex flex-col lg:flex-row h-full w-full items-center justify-between px-6 md:px-12 lg:px-20 gap-2 lg:gap-4 py-4 lg:py-0">
         {/* Left content */}
-        <div className="flex-1 flex flex-col justify-center max-w-2xl pt-20 lg:pt-0">
+        <div className="flex-1 flex flex-col justify-center max-w-2xl pt-12 sm:pt-16 lg:pt-0 shrink-0">
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.05]">
             <span className="text-white">Build The</span>
             <br />
@@ -24,7 +24,7 @@ export function SplineSceneBasic() {
             </span>
           </h1>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-12">
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 lg:mt-10">
             <button className="group relative px-8 py-4 bg-white text-black font-semibold rounded-xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(255,255,255,0.15)]">
               <span className="relative z-10 transition-colors duration-500 group-hover:text-black">Get Started Free</span>
               <div className="absolute inset-0 bg-gradient-to-r from-neutral-200 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -36,12 +36,12 @@ export function SplineSceneBasic() {
           </div>
         </div>
 
-        {/* Right content - 3D Scene - fully visible without crop */}
-        <div className="flex-1 relative w-full h-[42vh] sm:h-[45vh] lg:h-[85vh] flex items-center justify-center overflow-visible p-2 sm:p-4 lg:p-6">
-          <div className="w-full h-full max-h-[75vh] lg:max-h-[85vh] flex items-center justify-center">
+        {/* Right content - 3D Scene - fully visible without bottom crop */}
+        <div className="flex-1 relative w-full h-[36vh] sm:h-[40vh] lg:h-[72vh] xl:h-[76vh] flex items-center justify-center overflow-visible p-2 sm:p-3 lg:p-4 pb-6 sm:pb-8 lg:pb-10">
+          <div className="w-full h-full max-h-[58vh] sm:max-h-[62vh] lg:max-h-[70vh] xl:max-h-[72vh] flex items-center justify-center -translate-y-1 lg:-translate-y-2">
             <SplineScene
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full scale-[0.82] sm:scale-[0.85] lg:scale-[0.88] xl:scale-90 origin-center object-contain"
+              className="w-full h-full scale-[0.72] sm:scale-[0.76] lg:scale-[0.78] xl:scale-[0.82] origin-center object-contain"
             />
           </div>
         </div>
