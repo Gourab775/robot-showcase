@@ -11,9 +11,9 @@ export function SplineSceneBasic() {
         size={600}
       />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30 z-10 pointer-events-none" />
 
-      <div className="relative z-20 flex flex-col lg:flex-row h-full items-center justify-between px-6 md:px-12 lg:px-20">
+      <div className="relative z-20 flex flex-col lg:flex-row h-full w-full items-center justify-between px-6 md:px-12 lg:px-20 gap-4 lg:gap-2">
         {/* Left content */}
         <div className="flex-1 flex flex-col justify-center max-w-2xl pt-20 lg:pt-0">
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight leading-[1.05]">
@@ -36,12 +36,14 @@ export function SplineSceneBasic() {
           </div>
         </div>
 
-        {/* Right content - 3D Scene */}
-        <div className="flex-1 relative w-full h-[400px] lg:h-full">
-          <SplineScene
-            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-            className="w-full h-full"
-          />
+        {/* Right content - 3D Scene - fully visible without crop */}
+        <div className="flex-1 relative w-full h-[42vh] sm:h-[45vh] lg:h-[85vh] flex items-center justify-center overflow-visible p-2 sm:p-4 lg:p-6">
+          <div className="w-full h-full max-h-[75vh] lg:max-h-[85vh] flex items-center justify-center">
+            <SplineScene
+              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+              className="w-full h-full scale-[0.82] sm:scale-[0.85] lg:scale-[0.88] xl:scale-90 origin-center object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>
